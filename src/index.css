@@ -1,13 +1,116 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Almendra';
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('./Component/background.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: larger;
+}
+
+.center-div {
+  height: 450px;
+  background: rgba(253, 253, 253, 0.13);
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.center-div h1 {
+  background-color: rgba(41, 150, 86, 0.603);
+  padding: 3px;
+  font-family: 'Fredericka the Great';
+}
+
+
+
+.center-div input {
+  border: none;
+  border-bottom: 1.5px solid rgba(55, 155, 93, 0.555);
+  margin-right: 5px;
+  padding: 6px;
+  height: 30px;
+  font-size: larger;
+  outline: none;
+  width: 200px;
+  background: transparent;
+  font-family: 'Almendra';
+}
+
+ol {
+  list-style: none;
+  height: 250px;
+  overflow-y: scroll;
+  color: rgb(90, 92, 92);
+  padding: 0;
+}
+
+.todo-style {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.todo-style li {
+  max-width: 200px;
+}
+
+Button:hover{
+  color: red;
+}
+.btn{
+  bottom: 1.5px;
+}
+.btn:hover {
+  color: rgb(41, 150, 86);
+}
+
+@media screen and (max-width: 500px) {
+  .center-div {
+    height: inherit;
+    width: 100%;
+    background: url('./Component/background.webp');
+    
+  }
+
+  .center-div h1 {
+    padding: 5px;
+  }
+
+  .center-div input {
+    width: 65%;
+    height: 30px;
+    margin-right: 10px;
+    position: relative;
+    top: 1px;
+  }
+
+  ol {
+    margin-top: 15%;
+    height: 60%;
+  }
+
+  .todo-style {
+    margin-bottom: 7px;
+  }
+
+  .todo-style li {
+    max-width: 80%;
+  }
 }
