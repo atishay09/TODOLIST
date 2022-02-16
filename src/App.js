@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import TodoList from "./TodoList";
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import { IconButton } from "@material-ui/core";
 import { Tooltip } from "@material-ui/core";
 
-const App = () => {
-  const [item, setitem] = useState("");
-  const [items, setItems] = useState([]);
+const getLocalItems = () =>{
+  let list = localStorage.getItem('lists');
+  console.log(list);
+  if(list){
+    return JSON.parse(localStorage.getItem('lists'));
+  }
+  else{
+    return [];
+  }
+}
 
+const App = () => {
+
+  //add data to local storage.
+  
+  
+  const [item, setitem] = useState("");
+  const [items, setItems] = useState(getLocalItems());
+  
+  useEffect(() => {
+    localStorage.setItem('lists',JSON.stringify(items))
+  }, [items])
   const itemEvent = (event) => {
     setitem(event.target.value);
   };

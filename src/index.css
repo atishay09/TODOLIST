@@ -97,8 +97,6 @@ Button:hover{
     width: 65%;
     height: 30px;
     margin-right: 10px;
-    position: relative;
-    top: 1px;
   }
 
   ol {
